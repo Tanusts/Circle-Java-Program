@@ -1,0 +1,38 @@
+//creating a Circle class with main()
+import java.util.*;
+class Circle {
+    private double radius; //defining radius of a circle
+    public Circle() {
+        radius = 0.0; //defining no argument constructor
+    }
+    public Circle(double r) {
+        radius = r; //defining parametrized constructor
+    }
+    //Setter method
+    public void setRadius(double r) {
+        radius = r;
+    }
+    //Getter method
+    public double getRadius() {
+        return radius;
+    }
+    //calculate and return area
+    public double getArea() {
+    return (3.14 * (radius * radius)); // returning the area 
+    }
+    //tostring()method
+    public String toString()
+    {
+    return radius + " ";
+    }
+}
+class Main {
+public static void main(String[] args) {
+    Scanner sc  = new Scanner(System.in);
+    System.out.println("Enter the radius: "); // taking input of the the radius
+    double radius = sc.nextDouble();
+    Circle c = new Circle(radius);
+    System.out.println("Area of circle: "+c.getArea()); // call getArea() method for the circle
+    
+}
+}
